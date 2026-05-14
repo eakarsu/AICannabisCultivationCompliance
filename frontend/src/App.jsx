@@ -25,6 +25,17 @@ import WasteRecords from './pages/WasteRecords';
 import WasteRecordDetail from './pages/WasteRecordDetail';
 import EnvironmentalAlerts from './pages/EnvironmentalAlerts';
 import EnvironmentalAlertDetail from './pages/EnvironmentalAlertDetail';
+import RegulatoryTracker from './pages/RegulatoryTracker';
+import HarvestTimingOptimizer from './pages/HarvestTimingOptimizer';
+import LicenseRenewal from './pages/LicenseRenewal';
+import MicrobialAnalyzer from './pages/MicrobialAnalyzer';
+import SupplyChainAudit from './pages/SupplyChainAudit';
+import PestDetection from './pages/PestDetection';
+import EnergyOptimizer from './pages/EnergyOptimizer';
+import SeedSupplierAudit from './pages/SeedSupplierAudit';
+import AIResultsHistory from './pages/AIResultsHistory';
+import Webhooks from './pages/Webhooks';
+import Operations from './pages/Operations';
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token');
@@ -152,6 +163,17 @@ function App() {
       <Route path="/waste-records/:id" element={<ProtectedRoute><AppLayout><WasteRecordDetail /></AppLayout></ProtectedRoute>} />
       <Route path="/environmental-alerts" element={<ProtectedRoute><AppLayout><EnvironmentalAlerts /></AppLayout></ProtectedRoute>} />
       <Route path="/environmental-alerts/:id" element={<ProtectedRoute><AppLayout><EnvironmentalAlertDetail /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/regulatory-tracker" element={<ProtectedRoute><AppLayout><RegulatoryTracker /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/harvest-timing" element={<ProtectedRoute><AppLayout><HarvestTimingOptimizer /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/license-renewal" element={<ProtectedRoute><AppLayout><LicenseRenewal /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/microbial-analyzer" element={<ProtectedRoute><AppLayout><MicrobialAnalyzer /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/supply-chain" element={<ProtectedRoute><AppLayout><SupplyChainAudit /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/pest-detection" element={<ProtectedRoute><AppLayout><PestDetection /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/energy-optimizer" element={<ProtectedRoute><AppLayout><EnergyOptimizer /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/seed-supplier" element={<ProtectedRoute><AppLayout><SeedSupplierAudit /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/history" element={<ProtectedRoute><AppLayout><AIResultsHistory /></AppLayout></ProtectedRoute>} />
+      <Route path="/webhooks" element={<ProtectedRoute><AppLayout><Webhooks /></AppLayout></ProtectedRoute>} />
+      <Route path="/operations" element={<ProtectedRoute><AppLayout><Operations /></AppLayout></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

@@ -7,13 +7,25 @@ const router = express.Router();
 // GET /api/plants
 router.get('/', async (req, res) => {
   try {
+    const page = Math.max(1, parseInt(req.query.page) || 1);
+    const limit = Math.min(100, Math.max(1, parseInt(req.query.limit) || 20));
+    const offset = (page - 1) * limit;
+
+    const countResult = await pool.query('SELECT COUNT(*) FROM plants');
+    const total = parseInt(countResult.rows[0].count);
+
     const result = await pool.query(
       `SELECT p.*, gr.name as grow_room_name
        FROM plants p
        LEFT JOIN grow_rooms gr ON p.grow_room_id = gr.id
-       ORDER BY p.created_at DESC`
+       ORDER BY p.created_at DESC
+       LIMIT $1 OFFSET $2`,
+      [limit, offset]
     );
-    res.json(result.rows);
+    res.json({
+      data: result.rows,
+      pagination: { page, limit, total, totalPages: Math.ceil(total / limit) },
+    });
   } catch (error) {
     console.error('Error fetching plants:', error);
     res.status(500).json({ error: 'Internal server error.' });
@@ -48,6 +60,10 @@ router.post('/', async (req, res) => {
       grow_room_id, mother_plant, clone_date, status, thc_potential,
       cbd_potential, weight_grams, sale_price, sold_to, sold_date, notes
     } = req.body;
+
+    if (!strain || !batch_id || !stage) {
+      return res.status(400).json({ error: 'Missing required fields: strain, batch_id, stage.' });
+    }
 
     const result = await pool.query(
       `INSERT INTO plants (strain, batch_id, stage, planted_date, expected_harvest, location,
@@ -108,6 +124,95 @@ router.delete('/:id', async (req, res) => {
   } catch (error) {
     console.error('Error deleting plant:', error);
     res.status(500).json({ error: 'Internal server error.' });
+  }
+});
+
+// POST /api/plants/:id/ai-analysis — pest/disease analysis from plant stage + environmental data
+router.post('/:id/ai-analysis', async (req, res) => {
+  try {
+    const { temperature, humidity, co2_level, ph_level, vpd, symptoms } = req.body;
+
+    const plantResult = await pool.query(
+      `SELECT p.*, gr.name as grow_room_name, gr.temperature as room_temp,
+              gr.humidity as room_humidity, gr.co2_level as room_co2
+       FROM plants p
+       LEFT JOIN grow_rooms gr ON p.grow_room_id = gr.id
+       WHERE p.id = $1`,
+      [req.params.id]
+    );
+    if (plantResult.rows.length === 0) {
+      return res.status(404).json({ error: 'Plant not found.' });
+    }
+
+    const plant = plantResult.rows[0];
+    const envTemp = temperature ?? plant.room_temp ?? 'Unknown';
+    const envHumidity = humidity ?? plant.room_humidity ?? 'Unknown';
+    const envCO2 = co2_level ?? plant.room_co2 ?? 'Unknown';
+
+    const promptString = `Perform a detailed pest and disease analysis for the following cannabis plant. Respond in valid JSON.
+
+Plant Details:
+- Strain: ${plant.strain}
+- Current Stage: ${plant.stage}
+- Status: ${plant.status}
+- Grow Room: ${plant.grow_room_name || 'Unassigned'}
+
+Environmental Readings:
+- Temperature: ${envTemp}°F
+- Humidity: ${envHumidity}%
+- CO2 Level: ${envCO2} ppm
+- pH Level: ${ph_level ?? 'Unknown'}
+- VPD: ${vpd ?? 'Unknown'} kPa
+
+Reported Symptoms: ${symptoms ? (Array.isArray(symptoms) ? symptoms.join(', ') : symptoms) : 'None reported'}
+Notes: ${plant.notes || 'None'}
+
+Return JSON with this structure:
+{
+  "risk_level": "Low|Medium|High|Critical",
+  "identified_issues": [{"issue": "", "confidence": "", "description": ""}],
+  "recommended_treatments": [{"treatment": "", "application": "", "urgency": ""}],
+  "environmental_adjustments": [{"parameter": "", "current": "", "target": "", "reason": ""}],
+  "stage_specific_risks": "",
+  "prevention_tips": [],
+  "monitoring_schedule": "",
+  "summary": ""
+}`;
+
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'http://localhost:3000',
+      },
+      body: JSON.stringify({
+        model: 'anthropic/claude-3-5-sonnet-20241022',
+        messages: [
+          { role: 'system', content: 'You are an expert cannabis cultivation AI assistant with deep knowledge of state-specific regulations, agricultural best practices, and cannabis science.' },
+          { role: 'user', content: promptString }
+        ],
+        temperature: 0.4,
+        max_tokens: 1500,
+      }),
+    });
+
+    const data = await response.json();
+    if (data.error) throw new Error(data.error.message || 'OpenRouter API error');
+
+    const rawContent = data.choices[0].message.content;
+    let analysis;
+    try {
+      const jsonMatch = rawContent.match(/\{[\s\S]*\}/);
+      analysis = jsonMatch ? JSON.parse(jsonMatch[0]) : { summary: rawContent };
+    } catch {
+      analysis = { summary: rawContent };
+    }
+
+    res.json({ analysis, plant });
+  } catch (error) {
+    console.error('Error in AI plant analysis:', error);
+    res.status(500).json({ error: 'Failed to generate AI plant analysis.' });
   }
 });
 

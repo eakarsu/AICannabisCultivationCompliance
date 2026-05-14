@@ -1,0 +1,97 @@
+{
+  "project": "AICannabisCultivationCompliance",
+  "marker": "// === Batch 01 Gaps & Frontend Mounts ===",
+  "features": [
+    {
+      "slug": "agentic-compliance-copilot-generating-metrc-submis",
+      "component": "AgenticComplianceCopilotGeneratingMetrcSubmisPage",
+      "label": "Agentic compliance copilot generating Metrc submissions from cultivation events",
+      "endpoint": "/api/cf-agentic-compliance-copilot-generating-metrc-submis",
+      "kind": "cfs"
+    },
+    {
+      "slug": "rag-over-each-state-s-cannabis-regulations-with-up",
+      "component": "RagOverEachStateSCannabisRegulationsWithUpPage",
+      "label": "RAG over each state's cannabis regulations with up-to-date citation answers",
+      "endpoint": "/api/cf-rag-over-each-state-s-cannabis-regulations-with-up",
+      "kind": "cfs"
+    },
+    {
+      "slug": "real-time-iot-anomaly-detection-temp-humidity-co2-",
+      "component": "RealTimeIotAnomalyDetectionTempHumidityCo2Page",
+      "label": "Real-time IoT anomaly detection (temp, humidity, CO2, light) with auto-correction prompts",
+      "endpoint": "/api/cf-real-time-iot-anomaly-detection-temp-humidity-co2-",
+      "kind": "cfs"
+    },
+    {
+      "slug": "white-label-saas-for-license-management-consultant",
+      "component": "WhiteLabelSaasForLicenseManagementConsultantPage",
+      "label": "White-label SaaS for license-management consultants serving multiple cultivators",
+      "endpoint": "/api/cf-white-label-saas-for-license-management-consultant",
+      "kind": "cfs"
+    },
+    {
+      "slug": "ai-endpoints-scaffolded-but-not-mounted-under-stan",
+      "component": "AiEndpointsScaffoldedButNotMountedUnderStanPage",
+      "label": "AI endpoints scaffolded but not mounted under standard /chat-style routes; UI references exist",
+      "endpoint": "/api/gap-ai-endpoints-scaffolded-but-not-mounted-under-stan",
+      "kind": "gap"
+    },
+    {
+      "slug": "no-vision-based-plant-disease-pest-detection-model",
+      "component": "NoVisionBasedPlantDiseasePestDetectionModelPage",
+      "label": "No vision-based plant disease/pest detection model wired in",
+      "endpoint": "/api/gap-no-vision-based-plant-disease-pest-detection-model",
+      "kind": "gap"
+    },
+    {
+      "slug": "no-ai-yield-forecasting-model-behind-yieldpredicti",
+      "component": "NoAiYieldForecastingModelBehindYieldpredictiPage",
+      "label": "No AI yield-forecasting model behind YieldPredictions UI",
+      "endpoint": "/api/gap-no-ai-yield-forecasting-model-behind-yieldpredicti",
+      "kind": "gap"
+    },
+    {
+      "slug": "no-ai-metrc-submission-drafting-layer",
+      "component": "NoAiMetrcSubmissionDraftingLayerPage",
+      "label": "No AI Metrc submission drafting layer",
+      "endpoint": "/api/gap-no-ai-metrc-submission-drafting-layer",
+      "kind": "gap"
+    },
+    {
+      "slug": "notification-routes-exist-but-no-sms-push-delivery",
+      "component": "NotificationRoutesExistButNoSmsPushDeliveryPage",
+      "label": "Notification routes exist but no SMS/push delivery channel",
+      "endpoint": "/api/gap-notification-routes-exist-but-no-sms-push-delivery",
+      "kind": "gap"
+    },
+    {
+      "slug": "no-native-biotrack-leaf-integration-only-metrc",
+      "component": "NoNativeBiotrackLeafIntegrationOnlyMetrcPage",
+      "label": "No native BioTrack/Leaf integration (only Metrc)",
+      "endpoint": "/api/gap-no-native-biotrack-leaf-integration-only-metrc",
+      "kind": "gap"
+    },
+    {
+      "slug": "no-seed-to-sale-barcode-rfid-scanning-workflow",
+      "component": "NoSeedToSaleBarcodeRfidScanningWorkflowPage",
+      "label": "No seed-to-sale barcode/RFID scanning workflow",
+      "endpoint": "/api/gap-no-seed-to-sale-barcode-rfid-scanning-workflow",
+      "kind": "gap"
+    },
+    {
+      "slug": "no-multi-facility-consolidation-reporting",
+      "component": "NoMultiFacilityConsolidationReportingPage",
+      "label": "No multi-facility consolidation reporting",
+      "endpoint": "/api/gap-no-multi-facility-consolidation-reporting",
+      "kind": "gap"
+    },
+    {
+      "slug": "no-iot-environmental-sensor-stream-ingestion",
+      "component": "NoIotEnvironmentalSensorStreamIngestionPage",
+      "label": "No IoT environmental sensor stream ingestion",
+      "endpoint": "/api/gap-no-iot-environmental-sensor-stream-ingestion",
+      "kind": "gap"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { FaHome, FaSeedling, FaLeaf, FaBalanceScale, FaChartLine, FaFlask, FaSignOutAlt, FaCannabis, FaBoxes, FaTasks, FaCut, FaDna, FaRecycle, FaBell } from 'react-icons/fa';
+import { FaHome, FaSeedling, FaLeaf, FaBalanceScale, FaChartLine, FaFlask, FaSignOutAlt, FaCannabis, FaBoxes, FaTasks, FaCut, FaDna, FaRecycle, FaBell, FaIdCard, FaVial, FaTruck, FaBug, FaBolt, FaHistory } from 'react-icons/fa';
 
 function Sidebar() {
   const navigate = useNavigate();
@@ -25,6 +25,20 @@ function Sidebar() {
     { to: '/strains', icon: <FaDna />, label: 'Strain Library' },
     { to: '/waste-records', icon: <FaRecycle />, label: 'Waste Tracking' },
     { to: '/environmental-alerts', icon: <FaBell />, label: 'Alerts' },
+    { to: '/webhooks', icon: <FaBell />, label: 'Webhooks' },
+    { to: '/operations', icon: <FaTruck />, label: 'Operations' },
+  ];
+
+  const aiLinks = [
+    { to: '/ai/regulatory-tracker', icon: <FaBalanceScale />, label: 'Regulatory Tracker' },
+    { to: '/ai/harvest-timing', icon: <FaCut />, label: 'Harvest Timing' },
+    { to: '/ai/license-renewal', icon: <FaIdCard />, label: 'License Renewal' },
+    { to: '/ai/pest-detection', icon: <FaBug />, label: 'Pest Detection' },
+    { to: '/ai/microbial-analyzer', icon: <FaVial />, label: 'Microbial Analyzer' },
+    { to: '/ai/energy-optimizer', icon: <FaBolt />, label: 'Energy Optimizer' },
+    { to: '/ai/seed-supplier', icon: <FaSeedling />, label: 'Supplier Audit' },
+    { to: '/ai/supply-chain', icon: <FaTruck />, label: 'Supply Chain Audit' },
+    { to: '/ai/history', icon: <FaHistory />, label: 'AI History' },
   ];
 
   const initials = user.name
@@ -51,6 +65,19 @@ function Sidebar() {
             key={link.to}
             to={link.to}
             end={link.to === '/'}
+            className={({ isActive }) =>
+              `sidebar-nav-link ${isActive ? 'active' : ''}`
+            }
+          >
+            <span className="nav-icon">{link.icon}</span>
+            {link.label}
+          </NavLink>
+        ))}
+        <div style={{ marginTop: 16, padding: '8px 12px', fontSize: 11, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 1 }}>AI Tools</div>
+        {aiLinks.map((link) => (
+          <NavLink
+            key={link.to}
+            to={link.to}
             className={({ isActive }) =>
               `sidebar-nav-link ${isActive ? 'active' : ''}`
             }

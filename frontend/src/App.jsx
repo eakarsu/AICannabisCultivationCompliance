@@ -36,6 +36,7 @@ import SeedSupplierAudit from './pages/SeedSupplierAudit';
 import AIResultsHistory from './pages/AIResultsHistory';
 import Webhooks from './pages/Webhooks';
 import Operations from './pages/Operations';
+import CustomViewsPage from './pages/CustomViewsPage';
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token');
@@ -174,6 +175,7 @@ function App() {
       <Route path="/ai/history" element={<ProtectedRoute><AppLayout><AIResultsHistory /></AppLayout></ProtectedRoute>} />
       <Route path="/webhooks" element={<ProtectedRoute><AppLayout><Webhooks /></AppLayout></ProtectedRoute>} />
       <Route path="/operations" element={<ProtectedRoute><AppLayout><Operations /></AppLayout></ProtectedRoute>} />
+      <Route path="/custom-views" element={<ProtectedRoute><AppLayout><CustomViewsPage /></AppLayout></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

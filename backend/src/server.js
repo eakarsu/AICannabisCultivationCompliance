@@ -35,6 +35,7 @@ import _route_metrcAgent from './routes/metrcAgent.js';
 import _route_stateRegulationsRag from './routes/stateRegulationsRag.js';
 import _route_iotAnomalyDetector from './routes/iotAnomalyDetector.js';
 import _route_licenseConsultantSaas from './routes/licenseConsultantSaas.js';
+import customViewsRoutes from './routes/customViews.js';
 const app = express();
 const PORT = process.env.BACKEND_PORT || 3001;
 
@@ -74,6 +75,7 @@ app.use('/api/metrc', metrcRoutes);
 app.use('/api/reports', reportsRoutes);
 app.use('/api/webhook-delivery', webhookDeliveryRoutes);
 app.use('/api/agents', agentOrchestratorRoutes);
+app.use('/api/custom-views', customViewsRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
@@ -105,12 +107,15 @@ start();
 
 
 // === Batch 01 Gaps & Frontend Mounts ===
-app.use('/api/gap-ai-endpoints-scaffolded-but-not-mounted-under-stan', require('./routes/gap_ai_endpoints_scaffolded_but_not_mounted_under_stan'));
-app.use('/api/gap-no-vision-based-plant-disease-pest-detection-model', require('./routes/gap_no_vision_based_plant_disease_pest_detection_model'));
-app.use('/api/gap-no-ai-yield-forecasting-model-behind-yieldpredicti', require('./routes/gap_no_ai_yield_forecasting_model_behind_yieldpredicti'));
-app.use('/api/gap-no-ai-metrc-submission-drafting-layer', require('./routes/gap_no_ai_metrc_submission_drafting_layer'));
-app.use('/api/gap-notification-routes-exist-but-no-sms-push-delivery', require('./routes/gap_notification_routes_exist_but_no_sms_push_delivery'));
-app.use('/api/gap-no-native-biotrack-leaf-integration-only-metrc', require('./routes/gap_no_native_biotrack_leaf_integration_only_metrc'));
-app.use('/api/gap-no-seed-to-sale-barcode-rfid-scanning-workflow', require('./routes/gap_no_seed_to_sale_barcode_rfid_scanning_workflow'));
-app.use('/api/gap-no-multi-facility-consolidation-reporting', require('./routes/gap_no_multi_facility_consolidation_reporting'));
-app.use('/api/gap-no-iot-environmental-sensor-stream-ingestion', require('./routes/gap_no_iot_environmental_sensor_stream_ingestion'));
+// NOTE: original block used CommonJS require() inside an ESM module, which
+// crashed the process on startup (ERR_AMBIGUOUS_MODULE_SYNTAX). Commented out
+// because the underlying gap_*.js files are CJS and would also need rewriting.
+// app.use('/api/gap-ai-endpoints-scaffolded-but-not-mounted-under-stan', require('./routes/gap_ai_endpoints_scaffolded_but_not_mounted_under_stan'));
+// app.use('/api/gap-no-vision-based-plant-disease-pest-detection-model', require('./routes/gap_no_vision_based_plant_disease_pest_detection_model'));
+// app.use('/api/gap-no-ai-yield-forecasting-model-behind-yieldpredicti', require('./routes/gap_no_ai_yield_forecasting_model_behind_yieldpredicti'));
+// app.use('/api/gap-no-ai-metrc-submission-drafting-layer', require('./routes/gap_no_ai_metrc_submission_drafting_layer'));
+// app.use('/api/gap-notification-routes-exist-but-no-sms-push-delivery', require('./routes/gap_notification_routes_exist_but_no_sms_push_delivery'));
+// app.use('/api/gap-no-native-biotrack-leaf-integration-only-metrc', require('./routes/gap_no_native_biotrack_leaf_integration_only_metrc'));
+// app.use('/api/gap-no-seed-to-sale-barcode-rfid-scanning-workflow', require('./routes/gap_no_seed_to_sale_barcode_rfid_scanning_workflow'));
+// app.use('/api/gap-no-multi-facility-consolidation-reporting', require('./routes/gap_no_multi_facility_consolidation_reporting'));
+// app.use('/api/gap-no-iot-environmental-sensor-stream-ingestion', require('./routes/gap_no_iot_environmental_sensor_stream_ingestion'));

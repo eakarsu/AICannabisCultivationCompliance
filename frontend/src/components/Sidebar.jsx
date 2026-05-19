@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { FaHome, FaSeedling, FaLeaf, FaBalanceScale, FaChartLine, FaFlask, FaSignOutAlt, FaCannabis, FaBoxes, FaTasks, FaCut, FaDna, FaRecycle, FaBell, FaIdCard, FaVial, FaTruck, FaBug, FaBolt, FaHistory } from 'react-icons/fa';
+import { FaHome, FaSeedling, FaLeaf, FaBalanceScale, FaChartLine, FaFlask, FaSignOutAlt, FaCannabis, FaBoxes, FaTasks, FaCut, FaDna, FaRecycle, FaBell, FaIdCard, FaVial, FaTruck, FaBug, FaBolt, FaHistory, FaClipboardCheck } from 'react-icons/fa';
 
 function Sidebar() {
   const navigate = useNavigate();
@@ -27,6 +27,7 @@ function Sidebar() {
     { to: '/environmental-alerts', icon: <FaBell />, label: 'Alerts' },
     { to: '/webhooks', icon: <FaBell />, label: 'Webhooks' },
     { to: '/operations', icon: <FaTruck />, label: 'Operations' },
+    { to: '/custom-views', icon: <FaClipboardCheck />, label: 'Compliance Views' },
   ];
 
   const aiLinks = [

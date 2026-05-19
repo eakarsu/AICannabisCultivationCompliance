@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const BACKEND_BASE = (typeof window !== 'undefined' && window.__BACKEND_BASE__) || 'http://localhost:3641';
+
 const api = axios.create({
-  baseURL: 'http://localhost:3001/api',
+  baseURL: `${BACKEND_BASE}/api`,
   headers: {
     'Content-Type': 'application/json'
   }

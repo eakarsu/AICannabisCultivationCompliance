@@ -39,6 +39,7 @@ function Sidebar() {
     { to: '/ai/energy-optimizer', icon: <FaBolt />, label: 'Energy Optimizer' },
     { to: '/ai/seed-supplier', icon: <FaSeedling />, label: 'Supplier Audit' },
     { to: '/ai/supply-chain', icon: <FaTruck />, label: 'Supply Chain Audit' },
+    { to: '/ai/harvest-readiness', icon: <FaClipboardCheck />, label: 'Harvest Readiness' },
     { to: '/ai/history', icon: <FaHistory />, label: 'AI History' },
   ];
 

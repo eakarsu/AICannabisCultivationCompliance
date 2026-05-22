@@ -5,7 +5,7 @@ import authMiddleware from '../middleware/auth.js';
 import pool from '../models/database.js';
 
 const router = express.Router();
-const MODEL = 'anthropic/claude-3-5-sonnet-20241022';
+const MODEL = process.env.OPENROUTER_MODEL || 'anthropic/claude-haiku-4.5';
 
 async function persistResult(req, feature, input, output) {
   try {

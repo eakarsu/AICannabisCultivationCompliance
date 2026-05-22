@@ -30,6 +30,7 @@ import metrcRoutes from './routes/metrc.js';
 import reportsRoutes from './routes/reports.js';
 import webhookDeliveryRoutes from './routes/webhookDelivery.js';
 import agentOrchestratorRoutes from './routes/agentOrchestrator.js';
+import harvestReadinessRoutes from './routes/harvestReadiness.js';
 
 import _route_metrcAgent from './routes/metrcAgent.js';
 import _route_stateRegulationsRag from './routes/stateRegulationsRag.js';
@@ -75,6 +76,7 @@ app.use('/api/metrc', metrcRoutes);
 app.use('/api/reports', reportsRoutes);
 app.use('/api/webhook-delivery', webhookDeliveryRoutes);
 app.use('/api/agents', agentOrchestratorRoutes);
+app.use('/api/harvest-readiness', harvestReadinessRoutes);
 app.use('/api/custom-views', customViewsRoutes);
 
 // Health check

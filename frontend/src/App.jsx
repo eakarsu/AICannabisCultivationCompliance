@@ -36,7 +36,11 @@ import SeedSupplierAudit from './pages/SeedSupplierAudit';
 import AIResultsHistory from './pages/AIResultsHistory';
 import Webhooks from './pages/Webhooks';
 import Operations from './pages/Operations';
+import HarvestReadiness from './pages/HarvestReadiness';
 import CustomViewsPage from './pages/CustomViewsPage';
+
+import CodexCustomVizFeature from './pages/CodexCustomVizFeature';
+import CodexOperationsFeature from './pages/CodexOperationsFeature';
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token');
@@ -63,6 +67,9 @@ function App() {
 
   return (
     <Routes>
+        <Route path="/codex/custom-viz" element={<ProtectedRoute><CodexCustomVizFeature /></ProtectedRoute>} />
+        <Route path="/codex/operations" element={<ProtectedRoute><CodexOperationsFeature /></ProtectedRoute>} />
+
       <Route path="/login" element={<Login />} />
       <Route
         path="/"
@@ -169,6 +176,7 @@ function App() {
       <Route path="/ai/license-renewal" element={<ProtectedRoute><AppLayout><LicenseRenewal /></AppLayout></ProtectedRoute>} />
       <Route path="/ai/microbial-analyzer" element={<ProtectedRoute><AppLayout><MicrobialAnalyzer /></AppLayout></ProtectedRoute>} />
       <Route path="/ai/supply-chain" element={<ProtectedRoute><AppLayout><SupplyChainAudit /></AppLayout></ProtectedRoute>} />
+      <Route path="/ai/harvest-readiness" element={<ProtectedRoute><AppLayout><HarvestReadiness /></AppLayout></ProtectedRoute>} />
       <Route path="/ai/pest-detection" element={<ProtectedRoute><AppLayout><PestDetection /></AppLayout></ProtectedRoute>} />
       <Route path="/ai/energy-optimizer" element={<ProtectedRoute><AppLayout><EnergyOptimizer /></AppLayout></ProtectedRoute>} />
       <Route path="/ai/seed-supplier" element={<ProtectedRoute><AppLayout><SeedSupplierAudit /></AppLayout></ProtectedRoute>} />

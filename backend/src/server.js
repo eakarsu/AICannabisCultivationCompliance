@@ -9,7 +9,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
-import { initDatabase } from './models/database.js';
+import { validateRuntime } from './config/runtime.js';
+import { verifyToken } from './middleware/auth.js';
 import authRoutes from './routes/auth.js';
 import growRoomsRoutes from './routes/growRooms.js';
 import plantsRoutes from './routes/plants.js';
@@ -37,6 +38,7 @@ import _route_stateRegulationsRag from './routes/stateRegulationsRag.js';
 import _route_iotAnomalyDetector from './routes/iotAnomalyDetector.js';
 import _route_licenseConsultantSaas from './routes/licenseConsultantSaas.js';
 import customViewsRoutes from './routes/customViews.js';
+import cultivationLifecycleRoutes from './routes/cultivationLifecycle.js';
 const app = express();
 const PORT = process.env.BACKEND_PORT || 3001;
 
@@ -78,6 +80,7 @@ app.use('/api/webhook-delivery', webhookDeliveryRoutes);
 app.use('/api/agents', agentOrchestratorRoutes);
 app.use('/api/harvest-readiness', harvestReadinessRoutes);
 app.use('/api/custom-views', customViewsRoutes);
+app.use('/api/cultivation-lifecycle', verifyToken, cultivationLifecycleRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
@@ -87,7 +90,7 @@ app.get('/api/health', (req, res) => {
 // Start server
 async function start() {
   try {
-    await initDatabase();
+    validateRuntime();
     
 app.use('/api/metrc-agent', _route_metrcAgent); // apply pass 6 — audit custom suggestion
 

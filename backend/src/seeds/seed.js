@@ -15,10 +15,12 @@ const pool = new Pool({
   port: parseInt(process.env.DB_PORT) || 5432,
   database: process.env.DB_NAME || 'cannabis_compliance',
   user: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || 'postgres',
+  password: process.env.DB_PASSWORD,
 });
 
 async function seed() {
+  if (process.env.CONFIRM_DEMO_SEED !== 'yes' || process.env.NODE_ENV === 'production') throw new Error('Demo seed requires CONFIRM_DEMO_SEED=yes outside production');
+  if (!process.env.DEMO_PASSWORD || process.env.DEMO_PASSWORD.length < 12) throw new Error('DEMO_PASSWORD must contain at least 12 characters');
   const client = await pool.connect();
   try {
     console.log('Dropping existing tables...');
@@ -261,7 +263,7 @@ async function seed() {
 
     // Seed demo user
     console.log('Seeding demo user...');
-    const hashedPassword = await bcrypt.hash('password123', 10);
+    const hashedPassword = await bcrypt.hash(process.env.DEMO_PASSWORD, 10);
     await client.query(
       `INSERT INTO users (email, password, name, role) VALUES ($1, $2, $3, $4)`,
       ['admin@cannabis.com', hashedPassword, 'Admin User', 'admin']
@@ -451,7 +453,7 @@ async function seed() {
     `);
 
     console.log('Seed completed successfully!');
-    console.log('Demo user: admin@cannabis.com / password123');
+    console.log('Demo user created with the configured DEMO_PASSWORD.');
   } catch (error) {
     console.error('Seed error:', error);
     throw error;

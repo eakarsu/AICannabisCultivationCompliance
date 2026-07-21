@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { FaCannabis, FaEnvelope, FaLock, FaRocket } from 'react-icons/fa';
+import { FaCannabis, FaEnvelope, FaLock } from 'react-icons/fa';
 import api from '../api';
 
 function Login() {
@@ -30,15 +30,6 @@ function Login() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleDemoLogin = () => {
-    setEmail('admin@cannabis.com');
-    setPassword('password123');
-    setTimeout(() => {
-      const form = document.getElementById('login-form');
-      if (form) form.requestSubmit();
-    }, 100);
   };
 
   return (
@@ -97,14 +88,6 @@ function Login() {
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
 
-          <button
-            type="button"
-            className="login-demo-btn"
-            onClick={handleDemoLogin}
-          >
-            <FaRocket style={{ marginRight: '6px' }} />
-            Demo Login (Quick Access)
-          </button>
         </form>
       </div>
     </div>

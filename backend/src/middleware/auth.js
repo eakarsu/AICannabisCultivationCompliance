@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 
-const JWT_SECRET = process.env.JWT_SECRET || 'cannabis-compliance-jwt-secret-2024';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 export function verifyToken(req, res, next) {
   const authHeader = req.headers['authorization'];

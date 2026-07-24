@@ -6,9 +6,27 @@ import pool from '../models/database.js';
 
 const router = express.Router();
 const MODEL = process.env.OPENROUTER_MODEL || 'anthropic/claude-haiku-4.5';
+let aiResultsReady = false;
+
+async function ensureAIResultsTable() {
+  if (aiResultsReady) return;
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS ai_results (
+      id SERIAL PRIMARY KEY,
+      user_id INTEGER,
+      feature VARCHAR(100) NOT NULL,
+      input JSONB,
+      output JSONB,
+      model VARCHAR(255),
+      created_at TIMESTAMPTZ DEFAULT NOW()
+    )
+  `);
+  aiResultsReady = true;
+}
 
 async function persistResult(req, feature, input, output) {
   try {
+    await ensureAIResultsTable();
     const userId = req.user?.id || null;
     await pool.query(
       'INSERT INTO ai_results (user_id, feature, input, output, model) VALUES ($1, $2, $3, $4, $5)',

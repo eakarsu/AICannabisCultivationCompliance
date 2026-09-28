@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BACKEND_BASE = (typeof window !== 'undefined' && window.__BACKEND_BASE__) || 'http://localhost:3641';
+const BACKEND_BASE = (typeof window !== 'undefined' && window.__BACKEND_BASE__) || '';
 
 const api = axios.create({
   baseURL: `${BACKEND_BASE}/api`,

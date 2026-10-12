@@ -1,3 +1,4 @@
+import NativeAIControls from '../components/NativeAIControls';
 import React, { useState } from 'react';
 import { FaSeedling, FaPlay } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -40,6 +41,7 @@ function HarvestTimingOptimizer() {
   };
 
   return (
+    <NativeAIControls busy={loading} context="Cannabis cultivation and compliance">
     <div className="fade-in">
       <div className="page-header">
         <div>
@@ -104,6 +106,7 @@ function HarvestTimingOptimizer() {
 
       {analysis && <AIJsonRenderer data={analysis} title="Harvest Timing Recommendation" />}
     </div>
+    </NativeAIControls>
   );
 }
 

@@ -1,0 +1,262 @@
+[
+  {
+    "name": "AgenticComplianceCopilotGeneratingMetrcSubmisPage",
+    "id": "cf-agentic-compliance-copilot-generating-metrc-submis",
+    "title": "Agentic compliance copilot generating Metrc submissions from cultivation events",
+    "description": "Prepare a professional advisory report for agentic compliance copilot generating metrc submissions from cultivation events using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run Agentic compliance copilot generating Metrc submissions from cultivation events for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this Agentic compliance copilot generating Metrc submissions from cultivation events data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for Agentic compliance copilot generating Metrc submissions from cultivation events.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "AiEndpointsScaffoldedButNotMountedUnderStanPage",
+    "id": "gap-ai-endpoints-scaffolded-but-not-mounted-under-stan",
+    "title": "AI endpoints scaffolded but not mounted under standard /chat-style routes; UI references exist",
+    "description": "Prepare a professional advisory report for ai endpoints scaffolded but not mounted under standard /chat-style routes; ui references exist using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run AI endpoints scaffolded but not mounted under standard /chat-style routes; UI references exist for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this AI endpoints scaffolded but not mounted under standard /chat-style routes; UI references exist data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for AI endpoints scaffolded but not mounted under standard /chat-style routes; UI references exist.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NoAiMetrcSubmissionDraftingLayerPage",
+    "id": "gap-no-ai-metrc-submission-drafting-layer",
+    "title": "No AI Metrc submission drafting layer",
+    "description": "Prepare a professional advisory report for no ai metrc submission drafting layer using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run No AI Metrc submission drafting layer for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this No AI Metrc submission drafting layer data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for No AI Metrc submission drafting layer.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NoAiYieldForecastingModelBehindYieldpredictiPage",
+    "id": "gap-no-ai-yield-forecasting-model-behind-yieldpredicti",
+    "title": "No AI yield-forecasting model behind YieldPredictions UI",
+    "description": "Prepare a professional advisory report for no ai yield-forecasting model behind yieldpredictions ui using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run No AI yield-forecasting model behind YieldPredictions UI for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this No AI yield-forecasting model behind YieldPredictions UI data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for No AI yield-forecasting model behind YieldPredictions UI.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NoIotEnvironmentalSensorStreamIngestionPage",
+    "id": "gap-no-iot-environmental-sensor-stream-ingestion",
+    "title": "No IoT environmental sensor stream ingestion",
+    "description": "Prepare a professional advisory report for no iot environmental sensor stream ingestion using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run No IoT environmental sensor stream ingestion for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this No IoT environmental sensor stream ingestion data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for No IoT environmental sensor stream ingestion.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NoMultiFacilityConsolidationReportingPage",
+    "id": "gap-no-multi-facility-consolidation-reporting",
+    "title": "No multi-facility consolidation reporting",
+    "description": "Prepare a professional advisory report for no multi-facility consolidation reporting using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run No multi-facility consolidation reporting for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this No multi-facility consolidation reporting data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for No multi-facility consolidation reporting.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NoNativeBiotrackLeafIntegrationOnlyMetrcPage",
+    "id": "gap-no-native-biotrack-leaf-integration-only-metrc",
+    "title": "No native BioTrack/Leaf integration (only Metrc)",
+    "description": "Prepare a professional advisory report for no native biotrack/leaf integration (only metrc) using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run No native BioTrack/Leaf integration (only Metrc) for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this No native BioTrack/Leaf integration (only Metrc) data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for No native BioTrack/Leaf integration (only Metrc).\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NoSeedToSaleBarcodeRfidScanningWorkflowPage",
+    "id": "gap-no-seed-to-sale-barcode-rfid-scanning-workflow",
+    "title": "No seed-to-sale barcode/RFID scanning workflow",
+    "description": "Prepare a professional advisory report for no seed-to-sale barcode/rfid scanning workflow using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run No seed-to-sale barcode/RFID scanning workflow for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this No seed-to-sale barcode/RFID scanning workflow data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for No seed-to-sale barcode/RFID scanning workflow.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NoVisionBasedPlantDiseasePestDetectionModelPage",
+    "id": "gap-no-vision-based-plant-disease-pest-detection-model",
+    "title": "No vision-based plant disease/pest detection model wired in",
+    "description": "Prepare a professional advisory report for no vision-based plant disease/pest detection model wired in using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run No vision-based plant disease/pest detection model wired in for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this No vision-based plant disease/pest detection model wired in data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for No vision-based plant disease/pest detection model wired in.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "NotificationRoutesExistButNoSmsPushDeliveryPage",
+    "id": "gap-notification-routes-exist-but-no-sms-push-delivery",
+    "title": "Notification routes exist but no SMS/push delivery channel",
+    "description": "Prepare a professional advisory report for notification routes exist but no sms/push delivery channel using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run Notification routes exist but no SMS/push delivery channel for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this Notification routes exist but no SMS/push delivery channel data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for Notification routes exist but no SMS/push delivery channel.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "RagOverEachStateSCannabisRegulationsWithUpPage",
+    "id": "cf-rag-over-each-state-s-cannabis-regulations-with-up",
+    "title": "RAG over each state's cannabis regulations with up-to-date citation answers",
+    "description": "Prepare a professional advisory report for rag over each state's cannabis regulations with up-to-date citation answers using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run RAG over each state's cannabis regulations with up-to-date citation answers for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this RAG over each state's cannabis regulations with up-to-date citation answers data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for RAG over each state's cannabis regulations with up-to-date citation answers.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "RealTimeIotAnomalyDetectionTempHumidityCo2Page",
+    "id": "cf-real-time-iot-anomaly-detection-temp-humidity-co2-",
+    "title": "Real-time IoT anomaly detection (temp, humidity, CO2, light) with auto-correction prompts",
+    "description": "Prepare a professional advisory report for real-time iot anomaly detection (temp, humidity, co2, light) with auto-correction prompts using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run Real-time IoT anomaly detection (temp, humidity, CO2, light) with auto-correction prompts for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this Real-time IoT anomaly detection (temp, humidity, CO2, light) with auto-correction prompts data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for Real-time IoT anomaly detection (temp, humidity, CO2, light) with auto-correction prompts.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  },
+  {
+    "name": "WhiteLabelSaasForLicenseManagementConsultantPage",
+    "id": "cf-white-label-saas-for-license-management-consultant",
+    "title": "White-label SaaS for license-management consultants serving multiple cultivators",
+    "description": "Prepare a professional advisory report for white-label saas for license-management consultants serving multiple cultivators using the brief and evidence you provide. Review the findings, assumptions, and action plan before applying changes.",
+    "samples": [
+      {
+        "label": "Scenario",
+        "value": "Run White-label SaaS for license-management consultants serving multiple cultivators for a realistic customer case.\nContext: a team needs a practical recommendation based on incomplete operating data.\nGoal: identify the best action, key risks, missing information, and expected business impact.\nReturn: summary, prioritized action plan, assumptions, and follow-up questions."
+      },
+      {
+        "label": "Data sample",
+        "value": "Analyze this White-label SaaS for license-management consultants serving multiple cultivators data sample.\nInput records:\n- Record 1: urgent, customer impact high, owner unassigned\n- Record 2: medium priority, blocked by missing data\n- Record 3: recurring issue, automation opportunity\nReturn structured findings, anomalies, recommendations, and confidence."
+      },
+      {
+        "label": "Executive review",
+        "value": "Prepare an executive review for White-label SaaS for license-management consultants serving multiple cultivators.\nAudience: business owner, operations lead, and implementation team.\nInclude impact, risk, estimated effort, decision points, and a concise next-step plan."
+      }
+    ]
+  }
+]

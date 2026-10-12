@@ -1,3 +1,4 @@
+import NativeAIControls from '../components/NativeAIControls';
 import React, { useState } from 'react';
 import { FaVial, FaPlay } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -47,6 +48,7 @@ function MicrobialAnalyzer() {
   };
 
   return (
+    <NativeAIControls busy={loading} context="Cannabis cultivation and compliance">
     <div className="fade-in">
       <div className="page-header">
         <div>
@@ -89,6 +91,7 @@ function MicrobialAnalyzer() {
 
       {analysis && <AIJsonRenderer data={analysis} title="Microbial Risk Analysis" />}
     </div>
+    </NativeAIControls>
   );
 }
 

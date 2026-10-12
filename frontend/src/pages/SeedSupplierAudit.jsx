@@ -1,3 +1,4 @@
+import NativeAIControls from '../components/NativeAIControls';
 import React, { useState } from 'react';
 import { FaSeedling, FaPlay } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -44,6 +45,7 @@ function SeedSupplierAudit() {
   };
 
   return (
+    <NativeAIControls busy={loading} context="Cannabis cultivation and compliance">
     <div className="fade-in">
       <div className="page-header">
         <div>
@@ -78,6 +80,7 @@ function SeedSupplierAudit() {
       {loading && <div className="empty-state"><div className="empty-state-text">Reviewing supplier history...</div></div>}
       {analysis && <AIJsonRenderer data={analysis} title="Seed Supplier Audit" />}
     </div>
+    </NativeAIControls>
   );
 }
 

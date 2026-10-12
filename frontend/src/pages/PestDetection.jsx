@@ -1,3 +1,4 @@
+import NativeAIControls from '../components/NativeAIControls';
 import React, { useState } from 'react';
 import { FaBug, FaPlay, FaPlus, FaTrash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -51,6 +52,7 @@ function PestDetection() {
   };
 
   return (
+    <NativeAIControls busy={loading} context="Cannabis cultivation and compliance">
     <div className="fade-in">
       <div className="page-header">
         <div>
@@ -106,6 +108,7 @@ function PestDetection() {
 
       {analysis && <AIJsonRenderer data={analysis} title="Pest & Disease Diagnosis" />}
     </div>
+    </NativeAIControls>
   );
 }
 

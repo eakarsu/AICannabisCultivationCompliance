@@ -27,7 +27,7 @@ function Webhooks() {
     setLoading(true);
     try {
       const r = await api.get('/webhooks');
-      setItems(Array.isArray(r.data) ? r.data : (r.data?.data || []));
+      setItems(Array.isArray(r.data) ? r.data : Array.isArray(r.data?.data) ? r.data.data : []);
     } catch (err) {
       toast.error(err.response?.data?.error || 'Failed to load webhooks');
     }

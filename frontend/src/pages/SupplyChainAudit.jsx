@@ -1,3 +1,4 @@
+import NativeAIControls from '../components/NativeAIControls';
 import React, { useState } from 'react';
 import { FaTruck, FaPlay } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -45,6 +46,7 @@ function SupplyChainAudit() {
   };
 
   return (
+    <NativeAIControls busy={loading} context="Cannabis cultivation and compliance">
     <div className="fade-in">
       <div className="page-header">
         <div>
@@ -81,6 +83,7 @@ function SupplyChainAudit() {
 
       {analysis && <AIJsonRenderer data={analysis} title="Supply Chain Audit" />}
     </div>
+    </NativeAIControls>
   );
 }
 

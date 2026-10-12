@@ -22,7 +22,7 @@ function LabTests() {
   const fetchTests = async () => {
     try {
       const res = await api.get('/lab-tests');
-      setTests(Array.isArray(res.data) ? res.data : res.data.data || []);
+      setTests(Array.isArray(res.data) ? res.data : Array.isArray(res.data?.data) ? res.data.data : []);
     } catch (err) {
       toast.error('Failed to load lab tests');
     } finally {

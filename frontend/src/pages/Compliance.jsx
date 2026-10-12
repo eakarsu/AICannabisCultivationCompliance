@@ -21,7 +21,7 @@ function Compliance() {
   const fetchRecords = async () => {
     try {
       const res = await api.get('/compliance');
-      setRecords(Array.isArray(res.data) ? res.data : res.data.data || []);
+      setRecords(Array.isArray(res.data) ? res.data : Array.isArray(res.data?.data) ? res.data.data : []);
     } catch (err) {
       toast.error('Failed to load compliance records');
     } finally {

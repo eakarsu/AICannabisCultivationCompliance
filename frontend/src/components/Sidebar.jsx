@@ -1,3 +1,4 @@
+import AIReportLibrary from "./AIReportLibrary";
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { FaHome, FaSeedling, FaLeaf, FaBalanceScale, FaChartLine, FaFlask, FaSignOutAlt, FaCannabis, FaBoxes, FaTasks, FaCut, FaDna, FaRecycle, FaBell, FaIdCard, FaVial, FaTruck, FaBug, FaBolt, FaHistory, FaClipboardCheck } from 'react-icons/fa';
@@ -103,7 +104,7 @@ function Sidebar() {
           Sign Out
         </button>
       </div>
-    </aside>
+    <AIReportLibrary /></aside>
   );
 }
 

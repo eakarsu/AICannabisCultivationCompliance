@@ -23,7 +23,7 @@ function Harvests() {
   const fetchHarvests = async () => {
     try {
       const res = await api.get('/harvests');
-      setHarvests(Array.isArray(res.data) ? res.data : []);
+      setHarvests(Array.isArray(res.data) ? res.data : Array.isArray(res.data?.data) ? res.data.data : []);
     } catch (err) {
       toast.error('Failed to load harvests');
     } finally {

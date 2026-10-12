@@ -23,7 +23,7 @@ function AIResultsHistory() {
       const params = { page, limit: 20 };
       if (feature) params.feature = feature;
       const res = await api.get('/ai/results', { params });
-      setItems(res.data.data || []);
+      setItems(Array.isArray(res.data?.data) ? res.data.data : []);
       setTotalPages(res.data.pagination?.totalPages || 1);
     } catch (err) {
       toast.error(err.response?.data?.error || 'Failed to load AI history');

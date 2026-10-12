@@ -22,7 +22,7 @@ function YieldPredictions() {
   const fetchPredictions = async () => {
     try {
       const res = await api.get('/yield-predictions');
-      setPredictions(Array.isArray(res.data) ? res.data : res.data.data || []);
+      setPredictions(Array.isArray(res.data) ? res.data : Array.isArray(res.data?.data) ? res.data.data : []);
     } catch (err) {
       toast.error('Failed to load predictions');
     } finally {

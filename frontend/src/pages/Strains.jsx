@@ -22,7 +22,7 @@ function Strains() {
   const fetchStrains = async () => {
     try {
       const res = await api.get('/strains');
-      setStrains(Array.isArray(res.data) ? res.data : []);
+      setStrains(Array.isArray(res.data) ? res.data : Array.isArray(res.data?.data) ? res.data.data : []);
     } catch (err) {
       toast.error('Failed to load strains');
     } finally {
